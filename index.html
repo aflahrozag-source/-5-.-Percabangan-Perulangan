@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedRunner Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="header">
+            <h1>SPEED RUNNER</h1>
+            <p>Leaderboard & Sistem Klasifikasi Tier</p>
+        </div>
+
+        <!-- Form Input Player -->
+        <div class="form-box">
+            <div class="input-group">
+                <label for="nama">Nama Player</label>
+                <input type="text" id="nama" placeholder="Contoh: Rozag_Runner">
+            </div>
+
+            <div class="input-group">
+                <label for="skor">Skor Game (Maksimal 500)</label>
+                <input type="number" id="skor" placeholder="0 - 500" min="0" max="500">
+            </div>
+
+            <button onclick="prosesSkor()">Cek Tier & Tambah ke Leaderboard</button>
+        </div>
+        <div id="hasilBox" class="result-card">
+        </div>
+
+         <div class="leaderboard-box">
+            <h3>🏆 Top Leaderboard</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Nama</th>
+                            <th>Skor</th>
+                            <th>Tier</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelLeaderboard">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
